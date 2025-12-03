@@ -14,32 +14,53 @@ A clean, minimalist Jekyll theme with a modern design perfect for blogs, portfol
 
 ## Screenshots
 
-### Desktop View
-
-![Desktop Homepage](screenshots/desktop-home.png)
-_Clean, minimalist homepage with featured posts_
-
-![Desktop Blog Post](screenshots/desktop-post.png)
-_Elegant typography and reading experience_
-
-### Mobile View
-
-<div style="display: flex; gap: 10px;">
-  <img src="screenshots/mobile-home.png" alt="Mobile Homepage" width="300">
-  <img src="screenshots/mobile-post.png" alt="Mobile Blog Post" width="300">
-</div>
-
-_Fully responsive design optimized for mobile devices_
-
-### Features Showcase
-
-![Navigation Menu](screenshots/navigation.png)
-
-_Clean navigation with mobile-friendly hamburger menu_
-
-![Blog Cards](screenshots/blog-cards.png)
-
-_Beautiful blog post cards with metadata_
+<table>
+  <tr>
+    <td colspan="2" align="center">
+      <h3>🖥️ Desktop Experience</h3>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/desktop-home.png" alt="Desktop Homepage" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Clean homepage with featured posts</i></p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/desktop-post.png" alt="Desktop Blog Post" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Elegant reading experience</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h3>📱 Mobile Responsive</h3>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/mobile-home.png" alt="Mobile Homepage" width="280" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Mobile homepage</i></p>
+    </td>
+    <td align="center">
+      <img src="screenshots/mobile-post.png" alt="Mobile Blog Post" width="280" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Mobile blog post</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <h3>✨ Feature Highlights</h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="screenshots/navigation.png" alt="Navigation Menu" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Clean, responsive navigation</i></p>
+    </td>
+    <td>
+      <img src="screenshots/blog-cards.png" alt="Blog Cards" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p align="center"><i>Beautiful blog post cards</i></p>
+    </td>
+  </tr>
+</table>
 
 ## Demo
 
