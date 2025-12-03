@@ -1,0 +1,49 @@
+---
+layout: default
+title: Posts & Thoughts
+description: Thoughts on Islam and Technology
+---
+
+{% assign posts_per_page = 3 %}
+{% assign current_page = paginator.page | default: 1 %}
+
+{% for post in paginator.posts %}
+  {% assign index = paginator.per_page | times: paginator.page | minus: paginator.per_page | plus: forloop.index %}
+  {% include blog-card.html post=post index=index %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<div style="
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+">
+  {% if paginator.previous_page %}
+    <a
+      href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
+      style="
+        color: #828282;
+        text-decoration: none;
+        font-size: 12px;
+      "
+    >
+      ← Back
+    </a>
+  {% else %}
+    <div></div>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a
+      href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+      style="
+        color: #828282;
+        text-decoration: none;
+        font-size: 12px;
+      "
+    >
+      Next →
+    </a>
+  {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+  <meta name="author" content="{{ site.author.name }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ site.url }}/favicon.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}">
+  <meta name="twitter:image" content="{{ site.url }}/favicon.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.png">
+  
+  <!-- Fonts and Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #000;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .mobile-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 12px 16px;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      gap: 24px;
+    }
+    
+    .mobile-main {
+      flex: 1;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 640px) {
+      .mobile-sidebar {
+        display: none !important;
+      }
+      
+      .mobile-nav {
+        display: block !important;
+      }
+      
+      .mobile-main {
+        padding-top: 0 !important;
+      }
+    }
+    
+    @media (min-width: 641px) {
+      .mobile-nav {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-container">
+    {% include header.html %}
+    <div class="content-wrapper">
+      {% include sidebar.html %}
+      <main class="mobile-main" style="{% if page.layout == 'post' or page.url == '/about/' %}padding-top: 24px;{% endif %}">
+        {{ content }}
+      </main>
+    </div>
+    {% include footer.html %}
+  </div>
+</body>
+</html>

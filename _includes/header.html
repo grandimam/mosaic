@@ -1,0 +1,60 @@
+<div style="margin: 12px 0 24px 0;">
+  <div style="
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    color: #828282;
+    letter-spacing: 0.5px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  ">
+    ~ / <a 
+      href="{{ site.baseurl }}/" 
+      style="
+        color: {% if page.breadcrumb %}#000{% else %}#828282{% endif %};
+        text-decoration: none;
+        font-weight: {% if page.breadcrumb %}500{% else %}normal{% endif %};
+      "
+    >
+      {{ site.title | downcase }}
+    </a>{% if page.breadcrumb %} / {{ page.breadcrumb }}{% endif %}
+  </div>
+  
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" style="
+    display: none;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e5e5;
+  ">
+    <nav style="
+      display: flex;
+      gap: 16px;
+    ">
+      {% for item in site.navigation %}
+        {% assign current = false %}
+        {% if page.url == item.url %}
+          {% assign current = true %}
+        {% elsif page.url == '/' and item.url == '/' %}
+          {% assign current = true %}
+        {% elsif page.layout == 'post' and item.url == '/' %}
+          {% assign current = true %}
+        {% endif %}
+        <a
+          href="{{ site.baseurl }}{{ item.url }}"
+          style="
+            color: {% if current %}#000{% else %}#828282{% endif %};
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: {% if current %}500{% else %}normal{% endif %};
+            padding: 4px 0;
+          "
+        >
+          {% if current %}[{{ item.title }}]{% else %}{{ item.title }}{% endif %}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>

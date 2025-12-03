@@ -1,0 +1,11 @@
+<div style="
+  padding: 16px;
+  margin: 16px 0;
+  border-left: 4px solid {% if include.type == 'warning' %}#ff9800{% elsif include.type == 'error' %}#f44336{% elsif include.type == 'success' %}#4caf50{% else %}#2196f3{% endif %};
+  background-color: {% if include.type == 'warning' %}#fff3e0{% elsif include.type == 'error' %}#ffebee{% elsif include.type == 'success' %}#e8f5e9{% else %}#e3f2fd{% endif %};
+">
+  {% if include.title %}
+  <h4 style="margin-top: 0; margin-bottom: 8px;">{{ include.title }}</h4>
+  {% endif %}
+  <p style="margin: 0;">{{ include.content }}</p>
+</div>

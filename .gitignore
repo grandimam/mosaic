@@ -1,0 +1,40 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# Ruby
+*.gem
+.ruby-version
+.ruby-gemset
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using any Node tools)
+node_modules/
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp

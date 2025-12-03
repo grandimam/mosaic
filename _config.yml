@@ -1,0 +1,78 @@
+# Site settings
+title: Your Site Name
+description: A brief description of your site. Update this in _config.yml to reflect your content and purpose.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourdomain.com" # the base hostname & protocol for your site
+
+# Author
+author:
+  name: Your Name
+  twitter: yourtwitterhandle
+
+# SEO and meta tags
+tagline: Your Site Tagline
+keywords:
+  - your
+  - relevant
+  - keywords
+  - here
+  - add
+  - more
+  - as
+  - needed
+
+# Social
+social:
+  twitter: yourtwitterhandle
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:slug/
+paginate: 3
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Navigation
+navigation:
+  - title: posts
+    url: /
+  - title: books
+    url: /books
+  - title: about
+    url: /about
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap

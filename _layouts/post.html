@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article>
+  <header style="margin-bottom: 24px;">
+    <h1 style="font-size: 24px; font-weight: 600; margin-bottom: 8px;">{{ page.title }}</h1>
+    <div style="font-size: 14px; color: #828282;">
+      {{ page.date | date: "%b %-d, %Y" }} | {{ page.reading_time }} min read
+    </div>
+  </header>
+  
+  <div style="font-size: 16px; line-height: 1.6;">
+    {{ content }}
+  </div>
+  
+  {% if page.tags %}
+  <div style="margin-top: 32px; padding-top: 16px; border-top: 1px solid #e0e0e0;">
+    <div style="font-size: 14px; color: #828282;">
+      Tags: 
+      {% for tag in page.tags %}
+        <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 3px; margin-left: 4px;">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</article>

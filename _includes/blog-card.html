@@ -1,0 +1,48 @@
+<div style="
+  margin: 16px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+">
+  <span style="
+    color: #828282;
+    font-size: 16px;
+    min-width: 24px;
+    text-align: right;
+    line-height: 1.4;
+    user-select: none;
+  ">
+    {{ include.index }}.
+  </span>
+  
+  <div style="flex: 1;">
+    <a 
+      href="{{ site.baseurl }}/posts/{{ include.post.slug }}/"
+      style="
+        color: #000;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        display: block;
+        padding: 8px 0;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      "
+    >
+      {{ include.post.title }}
+    </a>
+    
+    <div style="
+      font-size: 14px;
+      color: #828282;
+      margin-top: -8px;
+      line-height: 1.4;
+      user-select: none;
+    ">
+      {{ include.post.date | date: "%b %-d" }} | {{ include.post.reading_time }} min read
+    </div>
+  </div>
+</div>
