@@ -12,6 +12,35 @@ A clean, minimalist Jekyll theme with a modern design perfect for blogs, portfol
 - **Easy Customization**: Simple configuration and styling options
 - **Social Media Ready**: Open Graph and Twitter Card support
 
+## Screenshots
+
+### Desktop View
+
+![Desktop Homepage](screenshots/desktop-home.png)
+_Clean, minimalist homepage with featured posts_
+
+![Desktop Blog Post](screenshots/desktop-post.png)
+_Elegant typography and reading experience_
+
+### Mobile View
+
+<div style="display: flex; gap: 10px;">
+  <img src="screenshots/mobile-home.png" alt="Mobile Homepage" width="300">
+  <img src="screenshots/mobile-post.png" alt="Mobile Blog Post" width="300">
+</div>
+
+_Fully responsive design optimized for mobile devices_
+
+### Features Showcase
+
+![Navigation Menu](screenshots/navigation.png)
+
+_Clean navigation with mobile-friendly hamburger menu_
+
+![Blog Cards](screenshots/blog-cards.png)
+
+_Beautiful blog post cards with metadata_
+
 ## Demo
 
 See the theme in action at: [Live Demo](https://grandimam.github.io/mosaic)
@@ -95,6 +124,7 @@ navigation:
 #### Blog Posts
 
 Create new posts in the `_posts/` directory with the naming format:
+
 ```
 YYYY-MM-DD-post-title.md
 ```
@@ -111,7 +141,6 @@ tags: [tag1, tag2, tag3]
 slug: your-post-slug
 excerpt: "A brief description of your post content"
 ---
-
 Your post content goes here...
 ```
 
@@ -124,7 +153,6 @@ Create new pages as `.md` files in the root directory:
 layout: default
 title: "Page Title"
 ---
-
 Your page content...
 ```
 
@@ -159,7 +187,7 @@ Update these CSS variables in `_layouts/default.html`:
 │   └── post.html        # Blog post layout
 ├── _includes/           # Reusable components
 │   ├── header.html      # Site header with navigation
-│   ├── sidebar.html     # Desktop sidebar navigation  
+│   ├── sidebar.html     # Desktop sidebar navigation
 │   ├── footer.html      # Site footer
 │   └── blog-card.html   # Blog post card component
 ├── _posts/              # Blog posts
@@ -208,9 +236,8 @@ Update these CSS variables in `_layouts/default.html`:
 ---
 layout: default
 ---
-<div class="custom-layout">
-  {{ content }}
-</div>
+
+<div class="custom-layout">{{ content }}</div>
 ```
 
 ### Custom Includes
@@ -253,7 +280,7 @@ For extensive styling, create `assets/css/custom.css`:
 Include in the layout:
 
 ```html
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
 ```
 
 ## Troubleshooting
@@ -261,23 +288,27 @@ Include in the layout:
 ### Common Issues
 
 **Bundle install fails**
+
 ```bash
 gem install bundler
 bundle install --retry=3
 ```
 
 **Ruby version issues**
+
 ```bash
 rbenv install 3.1.0
 rbenv global 3.1.0
 ```
 
 **Port already in use**
+
 ```bash
 bundle exec jekyll serve --port 4001
 ```
 
 **Build fails on GitHub Pages**
+
 - Ensure all gems in `Gemfile` are GitHub Pages compatible
 - Check the [GitHub Pages gem list](https://pages.github.com/versions/)
 

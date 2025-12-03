@@ -24,6 +24,9 @@ keywords:
 # Social
 social:
   twitter: yourtwitterhandle
+  github: yourgithubusername
+  linkedin: yourlinkedinprofile
+  email: your.email@example.com
 
 # Build settings
 markdown: kramdown
