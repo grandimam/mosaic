@@ -1,0 +1,2 @@
+# mosaic
+Minimalist Jekyll Template
